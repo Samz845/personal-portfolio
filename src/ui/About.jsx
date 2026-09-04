@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import Box from "./Box";
 
-const aboutVariants = {
+const AboutVariants = {
   hidden: { opacity: 0, x: "-100vw" },
   visible: {
     opacity: 1,
@@ -9,7 +10,7 @@ const aboutVariants = {
   },
 };
 
-const imageVariants = {
+const BoxVariants = {
   hidden: { opacity: 0, x: "100vw" },
   visible: {
     opacity: 1,
@@ -28,7 +29,7 @@ function About() {
       </div>
       <div className="flex items-center justify-center w-full gap-14 mb-4">
         <motion.div
-          variants={aboutVariants}
+          variants={AboutVariants}
           initial="hidden"
           animate="visible"
           className="mt-6 space-y-4 text-gray-700 dark:text-neutral-300 dark:bg-neutral-900 font-semibold w-full lg:w-[60%] border-r-4 pr-2 pl-2 rounded-r-lg bg-slate-50 border-blue-200"
@@ -61,16 +62,15 @@ function About() {
         </motion.div>
 
         <motion.div
-          variants={imageVariants}
+          variants={BoxVariants}
           initial="hidden"
           animate="visible"
-          className=" h-70 w-[28%] hidden lg:block overflow-hidden mt-2 shadow-xl rounded-lg shadow-black"
+          className=" h-80 lg:w-[40%] xl:w-[28%] p-4 hidden mt-2 shadow-xl rounded-lg shadow-black lg:grid grid-cols-2 gap-4"
         >
-          <img
-            src="whs3.jpg"
-            alt="Profile"
-            className="w-full  h-full object-cover "
-          />
+          <Box title="4+" description="Projects completed" />
+          <Box title="2+" description="Years Experience" />
+          <Box title="8+" description="Tech Stack Tools" />
+          <Box title="6+" description="Github Repos" />
         </motion.div>
       </div>
     </div>

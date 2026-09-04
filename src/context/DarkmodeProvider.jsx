@@ -6,7 +6,7 @@ const DarkmodeContext = createContext();
 export function DarkmodeProvider({ children }) {
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
     window.matchMedia("(prefers-color-scheme: dark)").matches,
-    "theme"
+    "theme",
   );
 
   const toggleDarkMode = () => {

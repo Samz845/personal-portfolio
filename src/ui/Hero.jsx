@@ -54,7 +54,7 @@ function Hero() {
     >
       <motion.img
         variants={childVariants}
-        src="whs3.jpg"
+        src="personal.PNG"
         alt="samuel's image"
         className="w-45 h-45 mt-4 rounded-full object-cover md:mt-8"
       />
@@ -115,7 +115,7 @@ function Hero() {
         className="flex space-x-2 text-white font-medium text-xl mt-4 mb-8 md:ml-16"
       >
         <a
-          href="https://drive.google.com/uc?export=download&id=1JSl87g8UQs-lvmE42E2KqIqNdqZ6_laa"
+          href="https://drive.google.com/uc?export=download&id=1z3B5lrLn0WnByXfPje37DSLaQilRIFRt"
           target="_blank"
           download
           rel="noopener"

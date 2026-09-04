@@ -9,5 +9,5 @@ createRoot(document.getElementById("root")).render(
     <DarkmodeProvider>
       <App />
     </DarkmodeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

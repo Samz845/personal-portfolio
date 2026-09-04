@@ -25,6 +25,8 @@ function ProjectList() {
       name: "Capstone Smartstart",
       stack: [
         "React",
+        "javascript",
+        "Typescript",
         "Tailwind CSS",
         "React Query",
         "Google Auth",

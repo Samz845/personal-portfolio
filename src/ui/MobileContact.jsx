@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import supabase from "../services/supabase";
+import { sendMsg } from "../services/sendMsg";
 
 function MobileContact() {
   const [loading, setLoading] = useState(false);
@@ -12,6 +12,7 @@ function MobileContact() {
   });
 
   const [errorMgs, setErrorMgs] = useState({});
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -39,24 +40,17 @@ function MobileContact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-    setLoading(true);
-    const { error } = await supabase.from("messages").insert([
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      },
-    ]);
-
-    setLoading(false);
-
-    if (error) {
-      console.error(error);
-      alert("There was an error sending your message");
-    } else {
-      alert("Message sent successfully");
+    try {
+      setLoading(true);
+      await sendMsg(formData);
+      alert("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
       setErrorMgs({});
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert(error.message || "Failed to send message");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -111,7 +105,10 @@ function MobileContact() {
           )}
         </div>
 
-        <button className="w-full rounded-lg bg-slate-900 py-3 text-white cursor-pointer hover:bg-slate-800 transition duration-700 dark:bg-blue-700 dark:hover:bg-blue-600">
+        <button
+          disabled={loading}
+          className="w-full rounded-lg bg-slate-900 py-3 text-white cursor-pointer hover:bg-slate-800 transition duration-700 dark:bg-blue-700 dark:hover:bg-blue-600"
+        >
           {loading ? "Please wait..." : "Send Message"}
         </button>
       </form>

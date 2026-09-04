@@ -8,7 +8,7 @@ import { HiOutlineSparkles } from "react-icons/hi2";
 import { HiOutlineBriefcase } from "react-icons/hi2";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import Toggle from "./Toggle";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useOutsideClick } from "../hooks/useOutSideClick";
 import { FaLaptopCode } from "react-icons/fa";
 function MainNav() {
@@ -16,6 +16,17 @@ function MainNav() {
   const sideBarRef = useRef();
   const handleOpen = () => setOpenMenu(false);
   useOutsideClick(sideBarRef, handleOpen);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [menuOpen]);
 
   return (
     <nav className="relative">
@@ -93,7 +104,8 @@ function MainNav() {
         </ul>
 
         <a
-          href="https://drive.google.com/uc?export=download&id=1JSl87g8UQs-lvmE42E2KqIqNdqZ6_laa"
+          href="https://drive.google.com/uc?export=download&id=1z3B5lrLn0WnByXfPje37DSLaQilRIFRts"
+          ss
           download
           target="_blank"
           rel="noopener"

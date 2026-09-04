@@ -1,4 +1,10 @@
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaReact } from "react-icons/fa";
+import {
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaReact,
+} from "react-icons/fa";
 import List from "./List";
 import {
   SiJavascript,
@@ -6,6 +12,8 @@ import {
   SiTypescript,
   SiRedux,
   SiSupabase,
+  SiNodedotjs,
+  SiExpress,
 } from "react-icons/si";
 
 function Skills() {
@@ -32,6 +40,14 @@ function Skills() {
           Typescript
         </List>
 
+        <List icon={<SiNodedotjs />} color="#74e31f">
+          Node.js
+        </List>
+
+        <List icon={<SiExpress />} color="#000000">
+          Express.js
+        </List>
+
         <List icon={<FaHtml5 />} color="#E34F26">
           HTML5
         </List>
@@ -41,7 +57,11 @@ function Skills() {
         </List>
 
         <List icon={<FaGitAlt />} color="#F05032">
-          Git & Github
+          Git
+        </List>
+
+        <List icon={<FaGithub />} color="#F05032">
+          Github
         </List>
 
         <List icon={<SiRedux />} color="#764ABC">

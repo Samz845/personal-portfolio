@@ -8,13 +8,46 @@ function Experience() {
         Experience
       </h1>
 
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-500">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-4">
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">
+            Frontend Developer - Project-Based
+          </h3>
+          <span className="text-sm md:text-base text-gray-500 dark:text-gray-400 whitespace-nowrap">
+            2024 - Present
+          </span>
+        </div>
+        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-medium mb-4">
+          Self-Directed
+        </p>
+
+        <ul className="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300">
+          <li className="text-sm md:text-base leading-relaxed">
+            Built responsive web applications using React and Tailwind CSS
+          </li>
+          <li className="text-sm md:text-base leading-relaxed">
+            Developed real-world projects including an onboarding web app and a
+            cabin management web app
+          </li>
+          <li className="text-sm md:text-base leading-relaxed">
+            Implemented authentication flows and protected routes
+          </li>
+          <li className="text-sm md:text-base leading-relaxed">
+            Built reusable UI components and handled form validation
+          </li>
+          <li className="text-sm md:text-base leading-relaxed">
+            Focused on clean UI, accessibility, and mobile-first design
+          </li>
+        </ul>
+      </div>
+
       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-4">
           <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">
             Frontend Developer - Startup Project
           </h3>
           <span className="text-sm md:text-base text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            Mar 2024 - July 20224
+            Mar 2024 - July 2024
           </span>
         </div>
         <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-medium mb-4">
@@ -43,39 +76,6 @@ function Experience() {
           </li>
           <li className="text-sm md:text-base leading-relaxed">
             Collaborated with backend integration requirements
-          </li>
-        </ul>
-      </div>
-
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-500">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-4">
-          <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">
-            Frontend Developer - Project-Based
-          </h3>
-          <span className="text-sm md:text-base text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            2024 - Present
-          </span>
-        </div>
-        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 font-medium mb-4">
-          Self-Directed
-        </p>
-
-        <ul className="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300">
-          <li className="text-sm md:text-base leading-relaxed">
-            Built responsive web applications using React and Tailwind CSS
-          </li>
-          <li className="text-sm md:text-base leading-relaxed">
-            Developed real-world projects including a driving tutor booking
-            platform, an onboarding web app and a cabin management web app
-          </li>
-          <li className="text-sm md:text-base leading-relaxed">
-            Implemented authentication flows and protected routes
-          </li>
-          <li className="text-sm md:text-base leading-relaxed">
-            Built reusable UI components and handled form validation
-          </li>
-          <li className="text-sm md:text-base leading-relaxed">
-            Focused on clean UI, accessibility, and mobile-first design
           </li>
         </ul>
       </div>
