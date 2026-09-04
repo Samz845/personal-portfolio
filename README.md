@@ -13,7 +13,7 @@ The portfolio highlights real-world React projects, live demos, and source code.
 - React
 - Tailwind CSS
 - Framer Motion
-- Supabase
+- Express.js
 - Context API
 
 ## 📁 Repository
